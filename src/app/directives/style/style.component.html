@@ -1,0 +1,20 @@
+<p appHighlight [ngStyle]="{
+  'color': color,
+  'font-size': '24px',
+  'font-family': 'garamond'
+}"
+>
+  Bonjour
+</p>
+<div>
+  <input class="form-control" type="color" [(ngModel)]="color">
+</div>
+<div [ngClass]="{eteindre: isEteinte}"
+(click)="eteindre()"
+>
+  Lampe
+</div>
+
+<input type="text" appRainbow [tableSize]="'3'">
+
+

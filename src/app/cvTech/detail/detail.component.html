@@ -1,4 +1,4 @@
-<div class="card-container">
+<div class="card-container" *ngIf="personne">
   <div class="card">
     <div class="front">
       <div class="cover">
@@ -9,7 +9,7 @@
       </div>
       <div class="content">
         <div class="main">
-          <h3 class="name">{{personne?.firstname}} {{personne?.name}}</h3>
+          <h3 class="name">{{personne?.firstname|titlecase}} {{personne?.name|titlecase}}</h3>
           <p class="profession">{{personne?.job}}</p>
           <p class="text-center">"I'm the new Sinatra, and since I made it here I can make it anywhere, yeah, they love me everywhere"</p>
         </div>
