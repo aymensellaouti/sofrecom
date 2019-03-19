@@ -1,0 +1,11 @@
+<p [style.backgroundColor]="couleur" (click)="showElement(monPara)">
+  first works!
+</p>
+<input #couleurInput (change)="changeColor(couleurInput.value)"
+       type="text"
+       class="form-control"
+>
+
+<input type="text" class="form-control" [(ngModel)]="two">
+la valeur de two est : {{two}}
+<app-second></app-second>
