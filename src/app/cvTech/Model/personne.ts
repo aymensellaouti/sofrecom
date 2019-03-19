@@ -6,7 +6,7 @@ export class Personne {
  path: string;
  job: string;
  cin: number;
-
+ something;
 
   constructor(id: number = 0, name: string = '', firstname: string = '',
               age: number = 0, path: string = '', job: string = '',

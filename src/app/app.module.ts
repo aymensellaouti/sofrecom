@@ -16,6 +16,9 @@ import { ItemComponent } from './cvTech/item/item.component';
 import { StyleComponent } from './directives/style/style.component';
 import { HighlightDirective } from './directives/highlight.directive';
 import { RainbowDirective } from './directives/rainbow.directive';
+import { DefaultImagePipe } from './cvTech/default-image.pipe';
+import { TodoComponent } from './todo/todo.component';
+import {TodoService} from './todo.service';
 
 @NgModule({
   declarations: [
@@ -29,14 +32,16 @@ import { RainbowDirective } from './directives/rainbow.directive';
     ItemComponent,
     StyleComponent,
     HighlightDirective,
-    RainbowDirective
+    RainbowDirective,
+    DefaultImagePipe,
+    TodoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [TodoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

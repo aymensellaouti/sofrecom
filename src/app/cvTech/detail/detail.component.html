@@ -5,7 +5,7 @@
         <img src="assets/images/rotating_card_thumb2.png">
       </div>
       <div class="user">
-        <img class="img-circle" src="assets/images/{{personne?.path}}">
+        <img class="img-circle" src="assets/images/{{personne?.path|defaultImage}}">
       </div>
       <div class="content">
         <div class="main">
@@ -24,7 +24,7 @@
       </div>
       <div class="content">
         <div class="main">
-          <h4 class="text-center">{{personne.age}}</h4>
+          <h4 class="text-center">{{personne?.age}}</h4>
           <p class="text-center">Web design, Adobe Photoshop, HTML5, CSS3, Corel and many others...</p>
 
           <div class="stats-container">
