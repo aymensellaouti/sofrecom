@@ -8,7 +8,8 @@ import {Todo} from '../Model/todo';
   styleUrls: ['./todo.component.css']
 })
 export class TodoComponent implements OnInit {
-
+  title = '';
+  content = '';
   todos: Todo[];
   constructor(
     private todoService: TodoService
@@ -17,5 +18,13 @@ export class TodoComponent implements OnInit {
   ngOnInit() {
     this.todos = this.todoService.getTodos();
   }
+  addTodo() {
+    this.todoService.addTodo(new Todo(this.title, this.content));
+    this.title = '';
+    this.content = '';
+  }
 
+  deleteTodo(todo: Todo) {
+    this.todoService.deleteTodo(todo);
+  }
 }
