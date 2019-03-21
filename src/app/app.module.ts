@@ -19,6 +19,8 @@ import { RainbowDirective } from './directives/rainbow.directive';
 import { DefaultImagePipe } from './cvTech/default-image.pipe';
 import { TodoComponent } from './todo/todo.component';
 import {TodoService} from './todo.service';
+import { EmbaucheComponent } from './embauche/embauche.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import {TodoService} from './todo.service';
     HighlightDirective,
     RainbowDirective,
     DefaultImagePipe,
-    TodoComponent
+    TodoComponent,
+    EmbaucheComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {TodoService} from '../todo.service';
 import {Todo} from '../Model/todo';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-todo',
@@ -12,7 +13,8 @@ export class TodoComponent implements OnInit {
   content = '';
   todos: Todo[];
   constructor(
-    private todoService: TodoService
+    private todoService: TodoService,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -26,5 +28,10 @@ export class TodoComponent implements OnInit {
 
   deleteTodo(todo: Todo) {
     this.todoService.deleteTodo(todo);
+  }
+
+  goToCv() {
+    const link = [''];
+    this.router.navigate(link);
   }
 }
