@@ -1,0 +1,40 @@
+<form #form="ngForm">
+  <label for="name">Name</label>
+  <input type="text" id="name" class="form-control"
+         ngModel
+         required
+         name="name"
+  >
+  <label for="firstname">Firstname</label>
+  <input type="text"
+         id="firstname"
+         class="form-control"
+         ngModel
+         name="firstname"
+  >
+  <label for="age">Age</label>
+  <input type="number" class="form-control"
+         ngModel
+         id="age"
+         name="age"
+  >
+  <label for="job">Job</label>
+  <input type="text" class="form-control"
+         ngModel
+         id="job"
+         name="job"
+  >
+  <label for="path">Path</label>
+  <input type="text" class="form-control"
+         ngModel
+         id="path"
+         name="path"
+  >
+  <label for="cin">Cin</label>
+  <input type="text" class="form-control"
+         ngModel
+         id="cin"
+         name="cin"
+  >
+<button class="btn btn-primary" [disabled]="form.invalid" (click)="addPersonne(form)">Enregistrer</button>
+</form>

@@ -22,6 +22,9 @@ import {TodoService} from './todo.service';
 import { EmbaucheComponent } from './embauche/embauche.component';
 import { HeaderComponent } from './header/header.component';
 import { DetailCvComponent } from './cvTech/detail-cv/detail-cv.component';
+import { NotfoundComponent } from './notfound/notfound.component';
+import { AddComponent } from './cvTech/add/add.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +43,10 @@ import { DetailCvComponent } from './cvTech/detail-cv/detail-cv.component';
     TodoComponent,
     EmbaucheComponent,
     HeaderComponent,
-    DetailCvComponent
+    DetailCvComponent,
+    NotfoundComponent,
+    AddComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

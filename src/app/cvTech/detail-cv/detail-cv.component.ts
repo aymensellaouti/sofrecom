@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
+import {CvService} from '../cv.service';
+import {Personne} from '../Model/personne';
 
 @Component({
   selector: 'app-detail-cv',
@@ -8,12 +10,22 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class DetailCvComponent implements OnInit {
 
-  constructor(private activatedRoute: ActivatedRoute) { }
-
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private cvService: CvService,
+    private router: Router
+    ) { }
+  personne: Personne;
   ngOnInit() {
     this.activatedRoute.params.subscribe(
       (monParam) => {
-        alert(monParam.id);
+        const reponse = this.cvService.getPersonneById(monParam.id);
+        if (reponse) {
+          this.personne = reponse;
+        } else {
+          const link = [''];
+          this.router.navigate(link);
+        }
       },
       (erreur) => {
         console.log(erreur);
