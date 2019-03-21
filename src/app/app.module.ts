@@ -21,6 +21,7 @@ import { TodoComponent } from './todo/todo.component';
 import {TodoService} from './todo.service';
 import { EmbaucheComponent } from './embauche/embauche.component';
 import { HeaderComponent } from './header/header.component';
+import { DetailCvComponent } from './cvTech/detail-cv/detail-cv.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { HeaderComponent } from './header/header.component';
     DefaultImagePipe,
     TodoComponent,
     EmbaucheComponent,
-    HeaderComponent
+    HeaderComponent,
+    DetailCvComponent
   ],
   imports: [
     BrowserModule,
