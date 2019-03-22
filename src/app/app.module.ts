@@ -25,6 +25,8 @@ import { DetailCvComponent } from './cvTech/detail-cv/detail-cv.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { AddComponent } from './cvTech/add/add.component';
 import { LoginComponent } from './login/login.component';
+import { ReactiveProgComponent } from './reactive-prog/reactive-prog.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -46,12 +48,14 @@ import { LoginComponent } from './login/login.component';
     DetailCvComponent,
     NotfoundComponent,
     AddComponent,
-    LoginComponent
+    LoginComponent,
+    ReactiveProgComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [TodoService],
   bootstrap: [AppComponent]

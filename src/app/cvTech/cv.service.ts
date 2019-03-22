@@ -1,20 +1,22 @@
 import { Injectable } from '@angular/core';
 import {Personne} from './Model/personne';
+import {HttpClient} from '@angular/common/http';
+import {Observable} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CvService {
+  apiLink = 'http://localhost:3000/api/personnes';
   private personnes: Personne[];
-  constructor() {
-    this.personnes = [
-      new Personne(1, 'sellaouti', 'aymen', 36, 'as.jpg', 'teacher', 1234),
-      new Personne(2, 'ben mohamed', 'ahmed', 26, '', 'developer', 5678),
-      new Personne(2, 'ben mohamed', 'ahmed', 26, '', 'developer', 5678),
-    ];
+  private getPersonneObservable: Observable<Personne []>;
+  constructor(
+    private http: HttpClient
+  ) {
+    this.getPersonneObservable = this.http.get<Personne[]>(this.apiLink);
   }
-  getPersonnes(): Personne[] {
-   return this.personnes;
+  getPersonnes(): Observable<Personne[]> {
+   return this.getPersonneObservable;
   }
   getPersonneById(id): Personne {
     const personne = this.personnes.find(response => response.id == id);

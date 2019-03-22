@@ -14,7 +14,11 @@ export class ListeComponent implements OnInit {
     private cvService: CvService
   ) { }
   ngOnInit() {
-    this.personnes = this.cvService.getPersonnes();
+    this.cvService.getPersonnes().subscribe(
+      (personnes) => {
+        this.personnes = personnes;
+      }
+    );
   }
 
   selectPersonne(selectedPersonne) {
