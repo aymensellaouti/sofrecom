@@ -18,7 +18,7 @@ import { HighlightDirective } from './directives/highlight.directive';
 import { RainbowDirective } from './directives/rainbow.directive';
 import { DefaultImagePipe } from './cvTech/default-image.pipe';
 import { TodoComponent } from './todo/todo.component';
-import {TodoService} from './todo.service';
+import {TodoService} from './service/todo.service';
 import { EmbaucheComponent } from './embauche/embauche.component';
 import { HeaderComponent } from './header/header.component';
 import { DetailCvComponent } from './cvTech/detail-cv/detail-cv.component';
@@ -49,7 +49,7 @@ import {HttpClientModule} from '@angular/common/http';
     NotfoundComponent,
     AddComponent,
     LoginComponent,
-    ReactiveProgComponent
+    ReactiveProgComponent,
   ],
   imports: [
     BrowserModule,

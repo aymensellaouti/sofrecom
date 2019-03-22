@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {Personne} from './cvTech/Model/personne';
+import {Personne} from '../cvTech/Model/personne';
 
 @Injectable({
   providedIn: 'root'
