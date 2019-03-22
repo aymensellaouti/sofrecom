@@ -22,13 +22,7 @@ export class CvService {
     return this.http.get<Personne>(this.apiLink + `/${id}`);
   }
   addPersonne(personne: Personne) {
-    const token = localStorage.getItem('user');
-    if (token) {
-      const headers = new HttpHeaders().append('Authorization', token);
-      return this.http.post(this.apiLink, personne, {headers});
-    } else {
       return this.http.post(this.apiLink, personne);
-    }
   }
   deletePersonne(id: number) {
     return this.http.delete(this.apiLink + `/${id}`);

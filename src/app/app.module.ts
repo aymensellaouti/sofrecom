@@ -27,6 +27,7 @@ import { AddComponent } from './cvTech/add/add.component';
 import { LoginComponent } from './login/login.component';
 import { ReactiveProgComponent } from './reactive-prog/reactive-prog.component';
 import {HttpClientModule} from '@angular/common/http';
+import {AuthentificationInterceptorProvider} from './interceptors/auth.interceptors';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,10 @@ import {HttpClientModule} from '@angular/common/http';
     FormsModule,
     HttpClientModule
   ],
-  providers: [TodoService],
+  providers: [
+    TodoService,
+    AuthentificationInterceptorProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
